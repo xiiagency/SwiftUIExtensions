@@ -1,4 +1,5 @@
 #if os(macOS)
+
 import AppKit
 import SwiftFoundationExtensions
 import os
