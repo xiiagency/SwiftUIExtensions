@@ -16,7 +16,11 @@ let package =
       ),
     ],
     dependencies: [
-      .package(name: "SwiftFoundationExtensions", url: "https://github.com/xiiagency/SwiftFoundationExtensions", .branchItem("main")),
+      .package(
+        name: "SwiftFoundationExtensions",
+        url: "https://github.com/xiiagency/SwiftFoundationExtensions",
+        .upToNextMinor(from: "1.0.0")
+      ),
     ],
     targets: [
       .target(
@@ -25,10 +29,5 @@ let package =
           "SwiftFoundationExtensions",
         ]
       ),
-      // NOTE: Re-enable when tests are added.
-//      .testTarget(
-//        name: "SwiftUIExtensionsTests",
-//        dependencies: ["SwiftUIExtensions"]
-//      ),
     ]
   )
