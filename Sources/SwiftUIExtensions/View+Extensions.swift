@@ -42,7 +42,7 @@ extension View {
   }
   
   @ViewBuilder public func clearBackground() -> some View {
-    if #available(iOS 16.0, *) {
+    if #available(iOS 16.0, watchOS 9.0, *) {
       self.scrollContentBackground(.hidden)
     } else {
       self.background(Color.clear)
