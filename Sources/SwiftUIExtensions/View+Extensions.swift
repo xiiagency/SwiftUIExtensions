@@ -40,6 +40,14 @@ extension View {
       alignment: alignment
     )
   }
+  
+  @ViewBuilder public func clearBackground() -> some View {
+    if #available(iOS 16.0, *) {
+      self.scrollContentBackground(.hidden)
+    } else {
+      self.background(Color.clear)
+    }
+  }
 }
 
 /**
